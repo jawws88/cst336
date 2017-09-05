@@ -41,7 +41,7 @@ in html
         
         <nav>
         <hr width="50%" />
-        <a href="index.html"><div id="Home">Home</div></a>
+        <a href="index.php"><div id="Home">Home</div></a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         </nav>
@@ -50,7 +50,7 @@ in html
         <br /> <br />
         <main> 
             <figure id="puppy">
-                <img src="img/Banner.png" alt="Picture of the world famous
+                <img src="Banner.png" alt="Picture of the world famous
                 BannerzBanners" />
             </figure>
             
@@ -83,7 +83,7 @@ in html
             angry.<br />
             For educational use only.
              <figure id="logo">
-                <img src="img/CSUMBLog.png" alt="csumb logo" />
+                <img src="CSUMBLog.png" alt="csumb logo" />
             </figure>
         </footer>
         <!-- closing footer -->
