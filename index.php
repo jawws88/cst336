@@ -21,7 +21,7 @@
      <div id="links">   
        <nav>
         <hr width=80%/>
-        <a href="index.html">Main</a>
+        <a href="index.php">Main</a>
         <a href="symptoms.html">Symptoms</a>
         <a href="fix.html">Fixes</a>
     <a href="references.html">Refrences</a>    </nav>      </div>  
