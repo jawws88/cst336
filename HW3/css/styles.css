@@ -1,0 +1,101 @@
+    @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
+
+    html {
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        }
+    
+    .home-bg {
+        font-family: 'Baloo Bhaina', cursive;
+        background-color: black;
+        background: url("../img/busstop.jpg");
+        background-size: 100%;
+        }
+        
+    .message-bg {
+           font-family: 'Baloo Bhaina', cursive;
+        
+        background-color: black;
+        background-image: url("../img/CartmanBak.jpg");
+        background-size: 100%;
+    }
+    
+    #main {
+        width:600px;
+        height:500px;
+        position:relative;
+        top:100px;
+        margin:0 auto;
+    }
+    
+    #msg{
+        width:600px;
+        height:500px;
+        position: relative;
+        top:100px;
+        left:50px;
+        font-size: 250%;
+    }
+    
+    #reel1, #reel2, #reel3, #reel4, #reel5, #reel6, #reel7, #reel8 {
+        top:448px;
+        position:absolute;
+    }
+    
+    #reel1{
+        left:-250px;
+    }
+    #reel2{
+        left:-100px;
+    }
+    #reel3{
+        left:50px;
+    }
+    #reel4{
+        left:200px;
+    }
+    #reel5{
+        left:350px;
+    }
+    #reel6{
+        left:500px;
+    }
+    #reel7{
+        left:650px;
+    }
+    #reel8{
+        left:800px;
+    }
+    
+    input{
+        top:75px;
+        left:530px;
+        position:absolute;
+        font-size:1.3em;
+        background-color: Transparent;
+        border:none;
+        outline:none; /*hides button outline when clicking on it*/
+        font-weight:bold;
+        color:yellow;
+        cursor:pointer;
+    }
+    
+    #output{
+     width:600px;   
+     margin:0 auto;
+     position:absolute;
+     text-align:center;
+     top:450px;
+     font-size:1.5em;
+     line-height: .7em;
+    }
+    
+    footer{
+        font-family: "Times New Roman", Georgia, Serif;
+        font-size:.8em;
+        width:600px;
+        margin:0 auto;
+        padding-top:10px;
+    }
