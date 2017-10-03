@@ -1,0 +1,23 @@
+    body{
+        opacity:0.9;
+        width:100%;
+        text-align:center;
+        color:blue;
+        background-size: 100%;
+        background-attachment: fixed;
+    }
+    
+    input {
+        font-size: 3em;
+        color: black;
+    }
+    
+    #options{
+        font-size:2em;
+        
+    }
+    
+    #carousel-example-generic {
+         margin: 0 auto;   
+         width: 600px;
+    }
