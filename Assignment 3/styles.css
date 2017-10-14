@@ -1,0 +1,100 @@
+@font-face {
+    font-family: ricknmorty;
+    src: url(fonts/ricknmorty-webfont.woff);
+}
+    #main {
+        height:500px;
+        position:fixed;
+    }
+    
+    body{
+        font-family: ricknmorty;
+        background-color: black;
+        background-size: cover;
+        background:no-repeat center fixed;
+        width:100%;
+        height: 100%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size:cover;
+    }
+        
+    #reel1, #reel2, #reel3, #reel4, #reel5, #reel6, #reel7, #reel8 {
+        top:100px;
+        position:fixed;
+    }
+    
+    #reel1{
+        left:-250px;
+    }
+    #reel2{
+        left:-100px;
+    }
+    #reel3{
+        left:0px;
+        top:300px;
+    }
+    #reel4{
+        left:200px;
+        top:200px;
+    }
+    #reel5{
+        left:350px;
+    }
+    #reel6{
+        top:200px;
+        left:500px;
+    }
+    #reel7{
+        right:290px;
+        top:400px;
+    }
+    #reel8{
+        right:50px;
+        top:200px;
+    }
+    
+    #submitButton{
+        top:630px;
+        left:20px;
+        position:absolute;
+        font-size:1.3em;
+        background-color: Transparent;
+        border:none;
+        outline:none; /*hides button outline when clicking on it*/
+        font-weight:bold;
+        color:yellow;
+        cursor:pointer;
+    }
+    
+    #msg{
+        top:600px;
+        left:0px;
+        position:absolute;
+        font-size:1.3em;
+        color:black;
+    }
+    
+    #Cbox{
+        top:400px;
+        left:0px;
+        position:absolute;
+        font-size:2em;
+        color:yellow;
+        font-family: "Times New Roman", Georgia, Serif;
+    }
+    option{
+        top:300;
+        left:0px;
+        position:absolute;
+        font-size:1.3em;
+    }
+    
+    p{
+     font-family: ricknmorty;
+     text-align:center;
+     top:200px;
+     font-size:4em;
+     left:500;
+     color:#02afc5;
+    }
