@@ -1,33 +1,41 @@
-body{
-    background-color:black;
-    color:white;
+#username-invalid{
+            color: #f00;
 }
-
- #main{
-        font-size: 250%;
-        font-style: italic;
-        width:800px;
-        margin: 0px auto;
-  color:red       }
-        
-   #p1, #p2 {
-     text-align:left;
-    width:350px;  font-size: 1.5em;     }
-        
-    #pic1{
-             float:right;
-       }
-       
- footer{
-        clear:left;
-  text-align:center;      font-size: 0.75em;
-        color: green;
-        } footer{  float:bottom;  }
-nav a{ clear:left; width:500px; }
-#links{font-size:1.5em;}
-#pic2{ float:top;}
-#p3{  font-size:1.5em;  }
-#symptoms{ font-size: 1.25em; }
-#symp{color:green; font-size: 250%; width:500px; margin: 0px auto;}
-#pic3{align:middle;}
-#fix{color:blue; font-size: 250%; width:500px; margin: 0px auto;}
+#username-valid{
+            color: #0f0;
+}
+#zip-code-error-msg{
+            color: #f00;
+}
+#city{
+    font-weight:bold;
+}
+#lon{
+    font-weight:bold;
+}
+#lat{
+    font-weight:bold;
+}
+#submit{
+    font-size: 1.25em;
+    text-align:center;
+    margin: 5% 0% 0% 38%;
+}
+body{
+    background-color: #006400;
+    font-size: 1.25em;
+    width:575px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 5px;
+}
+h1{
+    margin: 5% 10% 5% 10%;
+    text-align:center;
+    border-radius: 10px;
+    padding: 5px;
+}
+legend{
+    text-align:center; 
+    font-size: 1.5em;
+}

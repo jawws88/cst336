@@ -1,72 +1,118 @@
-﻿<!DOCTYPE html>
 <html>
-
-    <head>
-     <meta char=”utf-8” /> 
-   <title> The Computer Virus </title>
-   
     
-        <link href="styles.css" rel="stylesheet" type="text/css"/>
-    </head>
-    
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-
-    <body>
-  <div id="main">      <header>
-        <h1>Computer Virus's that kill . . . .
-        Computers</h1>
-    
-        </header>
-    </div>    
-     <div id="links">   
-       <nav>
-        <hr width=80%/>
-        <a href="index.php">Main</a>
-        <a href="symptoms.html">Symptoms</a>
-        <a href="fix.html">Fixes</a>
-    <a href="references.html">Refrences</a>    </nav>      </div>  
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+       <style>
+        @import url("styles.css");
+       </style> 
+    <script>
+        function getCityInfo() {
         
-        <br /> <br />
-        <main>
-            <div id="pic1"> 
-            <figure id="Vcomp">
-                <img src="Virus1.png" alt="Sick Computer" />
-     </figure>
-            </div>
+             $.ajax({
+                type: "get",
+                url: "http://hosting.otterlabs.org/laramiguel/ajax/zip.php",
+                dataType: "json",
+                data: {
+                    "zip_code": $("#zip").val()
+                },
+                 success: function(data,status) {
+                    console.log(data); 
+                    $("#zip-code-error-msg").html("");
+                    
+                    if (!data.city) {
+                        $("#zip-code-error-msg").html("Zip code not found"); 
+                        return; 
+                    }
+                   
+                    
+                    $("#city").html(data.city);
+                    $("#lon").html(data.longitude);
+                    $("#lat").html(data.latitude);
+                    
+                },
+             });
+        }
+        
+        
+        function getCountyInfo() {
             
-            <div id="p1">What is a Computer Virus?<br/> 
-               A computer virus is similar to a bioligical virus. For example to when
-            you catch a stomach virus and end up in the bathroom all day...
-            It's the same when a computer gets a virus instead 
-            of being stuck in the bathroom the computer can be acting slow
-            or <strong>dumping</strong> data. Even the most tech savy
-            are susceptible to getting a virus.</div><br/>
-            <br/>
-            <div id ="p2">How do you get a computer virus?<br/>
-               The web can be a dangerous place and a virus can be accidentally
-            downloaded; by installing a free game, going to a untrusted website,
-            opening attachments, installing a free app. One doesn't have to be online
-            to catch a virus. The virus could be installed by installing a program
-            from a disc.</div>
-    
-  </main>
-    
+            $.ajax({
+                type: "get",
+                url: "http://hosting.otterlabs.org/laramiguel/ajax/countyList.php",
+                dataType: "json",
+                data: {"state": $("#stateList").val()},
+                success: function(data,status) {
+                     
+                    $("#county-list").html("");
+                    for (var i = 0; i < data.counties.length; i++) {
+                        $("#county-list").append("<option>" + data.counties[i].county + "</option>");
+                    }
+                    
+                  },
+            });
+        }
         
-  
-        <footer>
-            <hr>
-            CST336. 2017&copy; Welch<br />
-            <strong>Disclaimer:</strong> The information above contains the use
-            of magic. <br />
-            For educational use only.
-             <figure id="logo">
-                <img src="virusD.png" alt="Virus Detected" />
-            </figure>
-        </footer>
-     
         
-    
-    </body>
- 
+        function validateUsername() {
+                    
+            $.ajax({
+                type: "get",
+                url: "api.php",
+                dataType: "json",
+                data: {
+                    'username': $('#username').val(),
+                    'action': 'validate-username'
+                },
+                success: function(data,status) {
+                    $('#username-invalid').html('');
+                     $('#username-valid').html('');
+                    if (data.length > 0) {
+                        $('#username-invalid').html("Username is not available"); 
+                    } else {
+                        $('#username-valid').html("Username is available");
+                    }
+                    
+                  },
+            });
+                }
+    </script>
+</head>
+
+
+
+<body id="dummybodyid">
+
+   <h1> Sign Up Form </h1>
+
+    <form onsubmit="return false;">
+        <fieldset>
+           <legend>Sign Up</legend>
+            First Name:  <input type="text"><br> 
+            Last Name:   <input type="text"><br> 
+            Email:       <input type="text"><br> 
+            Phone Number:<input type="text"><br><br>
+            Zip Code:    <input id="zip" onchange="getCityInfo();" type="text"> <span id="zip-code-error-msg"></span></span><br>
+            City:  <span id="city"></span>
+            <br>
+            Latitude: <span id="lon"></span>
+            <br>
+            Longitude: <span id="lat"></span>
+            <br><br>
+            State: 
+            <select onchange="getCountyInfo();" id="stateList" name="stateList">
+              <option value="ca">California</option>
+              <option value="nv">Nevada</option>
+              <option value="wa">Washington</option>
+              <option value="or">Oregon</option>
+            </select>
+            Select a County: <select id="county-list"></select><br>
+            
+            Desired Username: <input onchange="validateUsername();" id='username' type="text"> <span id="username-invalid"></span></span> <span id="username-valid"></span></span><br>
+            Password: <input type="password"><br>
+            Type Password Again: <input type="password"><br>
+            <input type="submit" id="submit" value="Sign up!">
+        </fieldset>
+    </form>
+</body>
 
 </html>
