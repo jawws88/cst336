@@ -1,0 +1,83 @@
+body {
+    font-family: Helvetica;
+    background-color: black;
+    color:white;
+}
+
+table, th, td {
+  text-align:left;
+}
+
+thead {
+    text-align:center;
+    font-size:1.2em;
+}
+
+a {
+    font-weight: 500;
+}
+
+#login{
+    text-align:center;
+    font-size:1.2em;
+    border-radius: 5px;
+    width: 400px;
+    margin: 0 auto;
+    background-color: grey;
+}
+
+#admin{
+    text-align:center;
+    font-size:1.2em;
+    border-radius: 5px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+#error{
+    text-align:center;
+    font-size:1.2em;
+    color:red;
+}
+
+p{
+    text-align:center;
+    font-size:1.2em;  
+}
+
+#item {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+#t1 {
+    width: 80%;
+}
+
+
+#line {
+	border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.movielist {
+    border-width: 2px;
+    display: inline;
+    padding: 2px;
+    font-size: 1.5em;
+}
+
+.actorlist {
+    border-width: 2px;
+    display: inline;
+    padding: 2px;
+    font-size: 1.5em;
+}
+
+.directorlist {
+    border-width: 2px;
+    display: inline;
+    padding: 2px;
+    font-size: 1.5em;
+}
